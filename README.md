@@ -131,9 +131,11 @@ export const BarPage = (props: BarPageProps) => {
 ```
 
 
-In this solution, I'm using the same CSS technique to arrange the content. 
+In this solution, I'm using the same CSS technique to arrange the content as approach 1. 
 
-This has the debatable advantage of not having to put the same boiler plate at the top of each page. 
+Appraoch 2 has the debatable advantage of not having to put the same boiler plate at the top of each page. 
+
+But importantly, it has the advantage of being able to have multiple items put content into the your SubNav/SideSav containers. In the example I've created `SomeSubComponent` also puts something inside of the subnav. This would be a lot trickier/messier with Approach 1. 
 
 
 
@@ -142,7 +144,5 @@ Peformance:
 Has the same rerendering has Appraoch 1. I think this is because it's the route change that causes the rerender. 
 
 
-Other note: 
 
-This has the advantage of being able to have multiple items put content into the your elements. In the example I've created `SomeSubComponent` also puts something inside of the subnav. 
 
