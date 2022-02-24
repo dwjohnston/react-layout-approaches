@@ -5,9 +5,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { BarPage } from '../pages/BarPage';
-import { FooPage } from '../pages/FooPage';
 import { HomePage } from '../pages/Homepage';
+import { routes } from './routes';
 
 export type MyRouterProps = {
 
@@ -18,12 +17,11 @@ export const MyRouter = (props: MyRouterProps) => {
   return <BrowserRouter>
 
     <Routes>
-      <Route path="/foo" element={<FooPage />}/>
-      <Route path="/bar" element={<BarPage />}/>
-      <Route index element={<HomePage/>}/>
+      {routes.map((v) => <Route path={v.path} key={v.path} element={v.component({})} />)}
+      <Route index element={<HomePage />} />
     </Routes>
 
 
-    
+
   </BrowserRouter>;
 };

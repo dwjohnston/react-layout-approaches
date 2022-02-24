@@ -1,6 +1,7 @@
 
 import React, { Children } from 'react';
 import styled from "styled-components";
+import { HeaderContent } from './HeaderContent';
 export type StandardLayoutProps = {
 
 
@@ -94,7 +95,9 @@ const StyledRoot = styled.div`
 export const StandardLayout = (props: React.PropsWithChildren<StandardLayoutProps>) => {
     const { children, subNavContent, sideNavContent } = props;
     return <StyledRoot>
-        <header>I am the header</header>
+        <header><p>I am the header</p>
+            <HeaderContent />
+        </header>
 
         {subNavContent && <div className='sub-nav'>{subNavContent}</div>}
 
