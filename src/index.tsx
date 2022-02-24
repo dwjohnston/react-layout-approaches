@@ -6,7 +6,7 @@ import { MyRouter } from './routes/MyRouter';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyRouter/>
+    {process.env.REACT_APP_APPROACH === "1" && <MyRouter />}
   </React.StrictMode>,
   document.getElementById('root')
 );
