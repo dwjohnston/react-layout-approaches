@@ -91,3 +91,58 @@ I can't be bothered doing this right now.
 
 Use portals instead. 
 
+Eg: 
+
+```jsx
+
+// Plain component
+export const FooPage = (props: FooPageProps) => {
+  const { } = props;
+  return <div>
+    foo page
+
+    <SizedContent/>
+  </div>;
+};
+
+
+```
+
+
+```jsx
+//Component with subnav and side nav
+export const BarPage = (props: BarPageProps) => {
+  const { } = props;
+  return <div
+  >
+
+    <SubNav>
+      <SizedContent width={800} height={100} color="#6af"> I am some sub nav content. Note that I am sticky!</SizedContent>
+    </SubNav>
+
+    <SideNav>
+      <SizedContent width={100} height={3000} color="#7f8">I am the side nav. Note that I scroll independently!</SizedContent>
+    </SideNav>
+
+
+    <SizedContent />
+  </div>;
+
+```
+
+
+In this solution, I'm using the same CSS technique to arrange the content. 
+
+This has the debatable advantage of not having to put the same boiler plate at the top of each page. 
+
+
+
+Peformance: 
+
+Has the same rerendering has Appraoch 1. I think this is because it's the route change that causes the rerender. 
+
+
+Other note: 
+
+This has the advantage of being able to have multiple items put content into the your elements. In the example I've created `SomeSubComponent` also puts something inside of the subnav. 
+
