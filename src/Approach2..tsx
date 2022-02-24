@@ -6,7 +6,7 @@
  * without prior written permission of the Company. All rights reserved.
  */
 import React from 'react';
-import { MyRouter } from './Approach1/routes/MyRouter';
+import { MyRouter } from './Approach2/routes/MyRouter';
 
 export type Approach1Props = {
 

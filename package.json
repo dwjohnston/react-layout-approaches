@@ -22,6 +22,7 @@
   },
   "scripts": {
     "start:1": "REACT_APP_APPROACH=1 react-scripts start",
+    "start:2": "REACT_APP_APPROACH=2 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
