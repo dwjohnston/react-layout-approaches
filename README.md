@@ -56,6 +56,12 @@ Some learnings:
 - Getting pretty happy with using grid, rather than flex. Named columns/rows is helpful. 
 - The min-width:0 / min-height:0 trick, to stop a flex/grid item from growing, is essential. See: https://stackoverflow.com/a/66689926/1068446
 
+
+Not sure about: 
+
+The position of the footer, when the side nav is open. Question for a designer though. 
+
+
 Performance: 
 
 I've left a console log in HeaderContent.tsx . 
