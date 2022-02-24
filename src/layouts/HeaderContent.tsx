@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
@@ -31,6 +31,12 @@ display: flex;
 export const HeaderContent = (props: HeaderContentProps) => {
     const { } = props;
 
+
+    useEffect(() => {
+        console.log("Header mount");
+    }, []); 
+
+    console.log("Header render"); 
 
 
     const location = useLocation();

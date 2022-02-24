@@ -49,6 +49,22 @@ export const BarPage = (props: BarPageProps) => {
 
 
 
+Pretty happy with this. 
+
+Some learnings: 
+
+- Getting pretty happy with using grid, rather than flex. Named columns/rows is helpful. 
+- The min-width:0 / min-height:0 trick, to stop a flex/grid item from growing, is essential. See: https://stackoverflow.com/a/66689926/1068446
+
+Performance: 
+
+I've left a console log in HeaderContent.tsx . 
+
+What you can see is that when we click between the Foo and Bar page, the Header Content re-renders. (It doesn't remount though). 
+
+Where this could potentially become problematic, is if you have a 'User Menu' type button in your header (where the user access the profile settings, sign out, etc). 
+
+I dunno, it's not remounting (which would be the real problem, imagine that the User Menu button did a profile fetch on mount), so I might squibbling here. 
 
 
 
@@ -56,9 +72,14 @@ export const BarPage = (props: BarPageProps) => {
 
 
 
-## Approach 1b 
+
+
+## ~~Approach 1b~~
 
 Similar but things that _every page must have_ (like the header, footer) are not included in the StandardLayout component. 
+
+I can't be bothered doing this right now. 
+
 
 ## Approach 2 
 
