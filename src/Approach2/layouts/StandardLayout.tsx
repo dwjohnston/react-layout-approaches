@@ -19,6 +19,7 @@ const StyledRoot = styled.div`
     display: grid; 
     grid-template-rows: [header] auto [subnav] auto [main] auto [footer] auto;
     grid-template-columns: [left] auto [center] 1fr [right] auto; 
+    overflow: auto; 
 
     
 
