@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
 `
 
 export const SizedContent = (props: React.PropsWithChildren<SizedContentProps>) => {
-    const { height = 3000, width = 300, color = "#f88", children } = props;
+    const { height = 3000, width = 300, color = "#f88",  children } = props;
     return <StyledDiv style={{ height, width, backgroundColor: color }}>
         {children}
     </StyledDiv>;
